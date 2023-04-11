@@ -1,0 +1,15 @@
+public String registerStudent(String name, String phone, String email) {
+
+apxio__Student__c newStudent = new apxio__Student__c();
+newStudent.Name = name;
+newStudent.apxio__Email__c = email;
+newStudent.apxio__Phone__c = phone; 
+
+insert newStudent;
+String autonum = [SELECT apxio__Registration_Number__c from apxio__Student__c WHERE id == newStudent.Id];
+
+return autonum;
+
+
+
+}
