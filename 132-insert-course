@@ -3,9 +3,8 @@ public Id insertCourse(String name, String details, Integer credits) {
     course.name = name;
     course.apxio__Course_Details__c = details;
 
-    if(course.apxio__Credits__c == 1 || course.apxio__Credits__c == 2 || course.apxio__Credits__c == 3
-    || course.apxio__Credits__c  ==4){
-
+    if(credits__c == 1 || credits == 2 || credits == 3
+    || credits  ==4){
     course.apxio__Credits__c = String.valueOf(credits);
     }
     else{
