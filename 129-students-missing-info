@@ -6,7 +6,7 @@ apxio__Email__c,
 apxio__Phone__c,
 apxio__Registration_Number__c
 FROM apxio__Student__c WHERE apxio__Active__c = TRUE 
-OR apxio__Email__c = NULL OR apxio__Phone__c =NULL
+AND (apxio__Email__c = NULL OR apxio__Phone__c =NULL)
 ORDER by Name ASC];
 
 return newquery;
