@@ -6,9 +6,9 @@ newStudent.apxio__Email__c = email;
 newStudent.apxio__Phone__c = phone; 
 
 insert newStudent;
-String autonum = [SELECT apxio__Registration_Number__c from apxio__Student__c WHERE id == newStudent.Id];
+apxio__Student__c autonum = [SELECT apxio__Registration_Number__c from apxio__Student__c WHERE id == newStudent.Id];
 
-return autonum;
+return autonum.apxio__Registration_Number__c;
 
 
 
