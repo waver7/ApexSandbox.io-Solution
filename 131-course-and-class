@@ -6,16 +6,7 @@ public void createCourseAndClass(String name, String description) {
     insert inscourse;
     apxio__Class__c insclass = new apxio__Class__c();
     insclass.Name = inscourse.Name;
-
-    // Truncate the string to 255 characters
-String truncatedDescription = apxio__Course_Details__c.substring(0, 255);
-
-
-
-
-
-
-    insclass.apxio__Description__c = truncatedDescription;
+    insclass.apxio__Description__c = inscourse.apxio__Course_Details__c.substring(0,255);
     insclass.apxio__Course__c = inscourse.Id;
     insert insclass;
 
