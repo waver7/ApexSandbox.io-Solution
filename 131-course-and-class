@@ -6,7 +6,13 @@ public void createCourseAndClass(String name, String description) {
     insert inscourse;
     apxio__Class__c insclass = new apxio__Class__c();
     insclass.Name = inscourse.Name;
-    insclass.apxio__Description__c = inscourse.apxio__Course_Details__c;
+    if(inscourse.apxio__Course_Details__c !== NULL){
+    insclass.apxio__Description__c = inscourse.apxio__Course_Details__c.left(255);
+    }
+    else{
+        insclass.apxio__Description__c = inscourse.apxio__Course_Details__c;
+    }
+
     insclass.apxio__Course__c = inscourse.Id;
     insert insclass;
 
