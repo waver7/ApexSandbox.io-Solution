@@ -2,7 +2,7 @@ public void createCourseAndClass(String name, String description) {
 
     apxio__Course__c inscourse = new apxio__Course__c();
     inscourse.Name = name;
-    inscourse.apxio__Course_Details__c = LEFT(description,255);
+    inscourse.apxio__Course_Details__c = description;
     insert inscourse;
     apxio__Class__c insclass = new apxio__Class__c();
     insclass.Name = inscourse.Name;
