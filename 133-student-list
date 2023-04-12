@@ -1,10 +1,10 @@
 public void insertStudents(List<String> studentNames, List<String> studentEmails) {
 
-    List<apxio__Student__c> studentList = new List<apxio__Student__c>();
+    List<apxio__Student__c> studentList = new List<apxio__Student__c>(); // list to receiver final values
 
-    for (Integer i = 0; i < studentNames.size(); i++){
-        apxio__Student__c newStudent = new apxio__Student__c();
-        newStudent.Name = studentNames[i];
+    for (Integer i = 0; i < studentNames.size(); i++){ // creation of loop starts from 0 and counts number of
+        apxio__Student__c newStudent = new apxio__Student__c(); //input values and than auto increment ++
+        newStudent.Name = studentNames[i];             //created new instance
         newStudent.apxio__Email__c = studentEmails[i];
         studentList.add(newStudent);
 
