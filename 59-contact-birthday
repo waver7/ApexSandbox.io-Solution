@@ -2,14 +2,11 @@ public Boolean isBirthday(Contact c) {
 
 date todayDate = System.today();
 
-if(date.day() == c.Birthday.day() && date.month() == c.Birthday.month()){
+if(todayDate.day() == c.Birthday.day() && todayDate.month() == c.Birthday.month()){
     return true;
 }
 else {
     return false;
 }
-
-
-
 
 }
