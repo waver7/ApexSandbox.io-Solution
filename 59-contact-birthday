@@ -1,18 +1,13 @@
 public Boolean isBirthday(Contact c) {
 
-//date myDate = date.newInstance(1998, 10, 21);
-//Integer day = myDate.dayOfYear();
-//system.assertEquals(294, day);
-    String i = c.Birthday.daysBetween(System.today());
+date todayDate = System.today();
 
-    if (Integer.valueOf(i) != null)
-        
-    {
-        return true;
-    }
-    else {
-        return false;
-    }
+if(date.day() == c.Birthday.day() && date.month() == c.Birthday.month()){
+    return true;
+}
+else {
+    return false;
+}
 
 
 
