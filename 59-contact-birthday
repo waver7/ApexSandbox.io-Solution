@@ -4,8 +4,8 @@ Date todayDate = System.today();
 Integer todate = todayDate.day();
 Integer tomon = todayDate.month();
 
-Integer dayofBirth = c.Birthday.day();
-Integer monthofBirth  = c.Birthday.month();
+Integer dayofBirth = c.Birthdate.day();
+Integer monthofBirth  = c.Birthdate.month();
 
 
 if(todate == dayofBirth && tomon == monthofBirth){
