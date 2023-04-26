@@ -3,9 +3,10 @@ public Boolean isBirthday(Contact c) {
 //date myDate = date.newInstance(1998, 10, 21);
 //Integer day = myDate.dayOfYear();
 //system.assertEquals(294, day);
+    Integer i = c.Birthday.daysBetween(System.today());
 
-
-    if (Math.mod(c.Birthday.daysBetween(System.today())) == 0)
+    if ( 
+        i = Math.floor(i))
     {
         return true;
     }
