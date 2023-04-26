@@ -5,10 +5,12 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
     }
     
     // Check if the phone number of both contacts are equal and not null
-    if (c1.Phone != null && c2.Phone != null && c1.Phone == c2.Phone) {
+    else if (c1.Phone != null && c2.Phone != null && c1.Phone == c2.Phone) {
         return true;
     }
     
-    // If no duplicates are found, return false
+    else{// If no duplicates are found, return false
     return false;
+    }
+
 }
