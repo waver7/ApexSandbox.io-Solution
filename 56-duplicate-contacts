@@ -1,13 +1,14 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
-    Contact c1 = new Contact();
-    Contact c2 = new Contact();
-    if(c1.Phone = null || c2.Phone = null || c1.Email = null || c2.Email = null ){
-        return false;
-    }
-    else if (c1.Phone == c2.Phone || c1.Email = c2.Email) {
+    // Check if the email address of both contacts are equal and not null
+    if (c1.Email != null && c2.Email != null && c1.Email == c2.Email) {
         return true;
     }
-    else {
-        return false;
+    
+    // Check if the phone number of both contacts are equal and not null
+    if (c1.Phone != null && c2.Phone != null && c1.Phone == c2.Phone) {
+        return true;
     }
+    
+    // If no duplicates are found, return false
+    return false;
 }
