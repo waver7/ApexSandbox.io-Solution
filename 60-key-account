@@ -1,5 +1,5 @@
 public Boolean isKeyAccount(Account a) {
-    if((a.Industry == 'Banking' && a.AnnualRevenue >= 60000) ||
+    if((a.Industry == 'Banking' && a.AnnualRevenue >= 600000) ||
     (a.Industry == 'Technology' && a.AnnualRevenue >= 800000) ||
     (a.Industry == 'Retail' && a.AnnualRevenue >= 2000000) ||
     (a.Industry == 'All others' && a.AnnualRevenue >= 50000) ||
